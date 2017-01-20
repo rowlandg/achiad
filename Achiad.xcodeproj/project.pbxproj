@@ -12,6 +12,7 @@
 		E7F351AB1E2A587B00E7FE95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F351A91E2A587B00E7FE95 /* Main.storyboard */; };
 		E7F351AD1E2A587B00E7FE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F351AC1E2A587B00E7FE95 /* Assets.xcassets */; };
 		E7F351B01E2A587B00E7FE95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F351AE1E2A587B00E7FE95 /* LaunchScreen.storyboard */; };
+		E7F351B81E3272EB00E7FE95 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F351B71E3272EB00E7FE95 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E7F351AC1E2A587B00E7FE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7F351AF1E2A587B00E7FE95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7F351B11E2A587B00E7FE95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F351B71E3272EB00E7FE95 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E7F351A51E2A587B00E7FE95 /* AppDelegate.swift */,
 				E7F351A71E2A587B00E7FE95 /* ViewController.swift */,
 				E7F351A91E2A587B00E7FE95 /* Main.storyboard */,
+				E7F351B71E3272EB00E7FE95 /* AboutViewController.swift */,
 				E7F351AC1E2A587B00E7FE95 /* Assets.xcassets */,
 				E7F351AE1E2A587B00E7FE95 /* LaunchScreen.storyboard */,
 				E7F351B11E2A587B00E7FE95 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F351B81E3272EB00E7FE95 /* AboutViewController.swift in Sources */,
 				E7F351A81E2A587B00E7FE95 /* ViewController.swift in Sources */,
 				E7F351A61E2A587B00E7FE95 /* AppDelegate.swift in Sources */,
 			);
