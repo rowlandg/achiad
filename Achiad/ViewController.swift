@@ -14,6 +14,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var targetLabel: UILabel!
   @IBOutlet weak var scoreLabel: UILabel!
   @IBOutlet weak var roundLabel: UILabel!
+  @IBOutlet weak var startOverButton: UIButton!
   
   var currentValue = 50
   var targetValue = 0
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    startNewRound()
+    startNewGame()
     updateLabels()
   }
   
@@ -34,23 +35,39 @@ class ViewController: UIViewController {
   
   @IBAction func showAlert() {
     let difference = abs(targetValue - currentValue)
-    let points = 100 - difference
-    score += points
+    var points = 100 - difference
+
+    switch (points) {
+    case 100:
+      title = "Perfect!"
+      points += 100
+    case 90..<100:
+      title = "Oooh, so close!"
+      points += 25
+    case 75..<90:
+      title = "Not bad"
+    case 50..<75:
+      title = "Come on, try harder"
+    default:
+      title = "Rubbish!"
+    }
     
+    score += points
     let message = "Grats! You scored \(points)"
     
-    let alert = UIAlertController(title: "Hello, World",
+    let alert = UIAlertController(title: title			,
                                   message: message,
                                   preferredStyle: .alert)
     let action = UIAlertAction(title: "OK",
                                style: .default,
-                               handler: nil)
+                               handler: { action in
+                                          self.startNewRound()
+                                          self.updateLabels()
+                                        })
     alert.addAction(action)
     present(alert, animated: true, completion: nil)
     
     round += 1
-    startNewRound()
-    updateLabels()
   }
   
   @IBAction func sliderMoved(_ slider: UISlider) {
@@ -64,10 +81,21 @@ class ViewController: UIViewController {
     slider.value = Float(currentValue)
   }
   
+  func startNewGame() {
+    round = 0
+    score = 0
+    startNewRound()
+  }
+  
   func updateLabels() {
     targetLabel.text = String(targetValue)
     scoreLabel.text = String(score)
     roundLabel.text = String(round)
+  }
+  
+  @IBAction func startOver() {
+    startNewGame()
+    updateLabels()
   }
 }
 

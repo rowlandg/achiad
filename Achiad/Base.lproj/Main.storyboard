@@ -39,6 +39,9 @@
                                 <rect key="frame" x="66" y="270" width="68" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start over"/>
+                                <connections>
+                                    <action selector="startOver" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gvz-lU-DuZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i82-Ra-dkQ">
                                 <rect key="frame" x="154" y="274" width="50" height="21"/>
@@ -111,6 +114,7 @@
                         <outlet property="roundLabel" destination="O7Q-ii-IX8" id="3DS-9l-2Q1"/>
                         <outlet property="scoreLabel" destination="RuC-kK-4dF" id="XsX-go-WkK"/>
                         <outlet property="slider" destination="pCJ-FZ-NQX" id="Qcq-re-Kr5"/>
+                        <outlet property="startOverButton" destination="3IH-fT-If9" id="Tt4-3b-yu7"/>
                         <outlet property="targetLabel" destination="HsF-2r-pIF" id="0bO-Cz-JXh"/>
                     </connections>
                 </viewController>
